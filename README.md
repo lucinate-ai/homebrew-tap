@@ -5,6 +5,7 @@ The Homebrew tap for [lucinate-ai](https://github.com/lucinate-ai) — the termi
 ## Install lucinate
 
 ```sh
+brew trust --formula lucinate-ai/tap/lucinate
 brew install lucinate-ai/tap/lucinate
 ```
 
