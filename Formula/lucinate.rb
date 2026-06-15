@@ -5,21 +5,21 @@
 class Lucinate < Formula
   desc "Terminal-native chat client for OpenClaw, Hermes, Ollama and OpenAI-compatible providers"
   homepage "https://github.com/lucinate-ai/lucinate"
-  version "1.17.1"
+  version "1.17.2"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/lucinate-ai/lucinate/releases/download/v1.17.1/lucinate_1.17.1_darwin_amd64.tar.gz"
-      sha256 "f1301ad82ed88fdd43725de7d0db9844749268a54406193d1b9bf0256421b7fc"
+      url "https://github.com/lucinate-ai/lucinate/releases/download/v1.17.2/lucinate_1.17.2_darwin_amd64.tar.gz"
+      sha256 "e4c65db90c51fc292ec8356acc2e400ce18a1a91e749830a51a37fe594e4800f"
 
       define_method(:install) do
         bin.install "lucinate"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/lucinate-ai/lucinate/releases/download/v1.17.1/lucinate_1.17.1_darwin_arm64.tar.gz"
-      sha256 "5261f0af91d3075295494ae31613a966e577b48bc520e471659ada4d081f7181"
+      url "https://github.com/lucinate-ai/lucinate/releases/download/v1.17.2/lucinate_1.17.2_darwin_arm64.tar.gz"
+      sha256 "cc8cb3cf04f804462f228168adcc93c151a3ef42f7d1a966336c7b7200f33328"
 
       define_method(:install) do
         bin.install "lucinate"
@@ -29,15 +29,15 @@ class Lucinate < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lucinate-ai/lucinate/releases/download/v1.17.1/lucinate_1.17.1_linux_amd64.tar.gz"
-      sha256 "a8a59e9f36109bee7b55e3dc10ea78d6b4fcbb6e89dc431626c632503c9eac51"
+      url "https://github.com/lucinate-ai/lucinate/releases/download/v1.17.2/lucinate_1.17.2_linux_amd64.tar.gz"
+      sha256 "f1de1bb221e6fcd23716c8de3ad37696d79bdae80dcbf4f2e93a9e2857a775f5"
       define_method(:install) do
         bin.install "lucinate"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lucinate-ai/lucinate/releases/download/v1.17.1/lucinate_1.17.1_linux_arm64.tar.gz"
-      sha256 "5928531fc4e00a124e1cbe6164d0c7b9694d40108023ff3968042df52273cd68"
+      url "https://github.com/lucinate-ai/lucinate/releases/download/v1.17.2/lucinate_1.17.2_linux_arm64.tar.gz"
+      sha256 "fcb8f7edb9832b3acc78aa01f68173f4f2aa98be89bed241e06033ede9782397"
       define_method(:install) do
         bin.install "lucinate"
       end
