@@ -5,21 +5,21 @@
 class Outfit < Formula
   desc "Configure opencode provider catalogues"
   homepage "https://github.com/lucinate-ai/outfit"
-  version "1.0.1"
+  version "1.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/lucinate-ai/outfit/releases/download/v1.0.1/outfit_darwin_amd64.tar.gz"
-      sha256 "a477443dc9a537a4d9e93cf31fa5252ee0761a16d1bdb118aa90cbc474eaf2de"
+      url "https://github.com/lucinate-ai/outfit/releases/download/v1.1.0/outfit_darwin_amd64.tar.gz"
+      sha256 "0f13ab1170f6f473349fb06a21b9314840722c1a124a2450ef66240d0acfb513"
 
       define_method(:install) do
         bin.install "outfit"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/lucinate-ai/outfit/releases/download/v1.0.1/outfit_darwin_arm64.tar.gz"
-      sha256 "9769600cd368b0f05639794db2eb071622865fd9647121fb94b1c57ed39bfbcc"
+      url "https://github.com/lucinate-ai/outfit/releases/download/v1.1.0/outfit_darwin_arm64.tar.gz"
+      sha256 "e69e5a085cf0f096baeafbb71a24174ca65cfe6e41c3defe64c8879a75a436b5"
 
       define_method(:install) do
         bin.install "outfit"
@@ -29,15 +29,15 @@ class Outfit < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lucinate-ai/outfit/releases/download/v1.0.1/outfit_linux_amd64.tar.gz"
-      sha256 "d6775a446eafa4c69e793cad6817f32c2b6144c76952ece7f058ab4a282ec1b1"
+      url "https://github.com/lucinate-ai/outfit/releases/download/v1.1.0/outfit_linux_amd64.tar.gz"
+      sha256 "95e497375f83d538349f33c0eec6afbd553686ed6edf40d302465f7d459f8c02"
       define_method(:install) do
         bin.install "outfit"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lucinate-ai/outfit/releases/download/v1.0.1/outfit_linux_arm64.tar.gz"
-      sha256 "d90754105f9cd29bcb501ecedba4b5406fae4d64283443fe098c260e2a4bf07f"
+      url "https://github.com/lucinate-ai/outfit/releases/download/v1.1.0/outfit_linux_arm64.tar.gz"
+      sha256 "6ef6dc647527a4021da65edeaab56058b2dfd5756be4c7fde8d29c6ee0d39d3d"
       define_method(:install) do
         bin.install "outfit"
       end
