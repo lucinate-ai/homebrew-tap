@@ -5,13 +5,13 @@
 class Outfit < Formula
   desc "Configure opencode provider catalogues"
   homepage "https://github.com/lucinate-ai/outfit"
-  version "1.17.0"
+  version "1.18.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/lucinate-ai/outfit/releases/download/v1.17.0/outfit_darwin_amd64.tar.gz"
-      sha256 "f283626d120e46910af0e07c8760adcab12f67bd9f15fd88828ab6ef5d9ece09"
+      url "https://github.com/lucinate-ai/outfit/releases/download/v1.18.0/outfit_darwin_amd64.tar.gz"
+      sha256 "abe09cf7698dfcec039c273b23a80bcc43d0b0f6e0558624b927cdbe3a5f5529"
 
       define_method(:install) do
         bin.install "outfit"
@@ -19,8 +19,8 @@ class Outfit < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/lucinate-ai/outfit/releases/download/v1.17.0/outfit_darwin_arm64.tar.gz"
-      sha256 "5454d326afefc7ed12e184ca7836fcb692dcf8a1db17d6abe6ca7e2eb8634353"
+      url "https://github.com/lucinate-ai/outfit/releases/download/v1.18.0/outfit_darwin_arm64.tar.gz"
+      sha256 "e779d191fc0ec353bd00dd14da20ae6459c04ea6a87d60db3b5d2704e2a4492a"
 
       define_method(:install) do
         bin.install "outfit"
@@ -31,16 +31,16 @@ class Outfit < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lucinate-ai/outfit/releases/download/v1.17.0/outfit_linux_amd64.tar.gz"
-      sha256 "fa76d62ae56bb4bdc4ab20cd9f326ded24762a54c59e334348dbcbfdc79ba56c"
+      url "https://github.com/lucinate-ai/outfit/releases/download/v1.18.0/outfit_linux_amd64.tar.gz"
+      sha256 "598bcf1bef21d14a5414fa43c1aa6c0445893ac1f0a15b7596ee747984ae4a81"
       define_method(:install) do
         bin.install "outfit"
         generate_completions_from_executable(bin/"outfit", "completion", shells: [:bash, :zsh])
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lucinate-ai/outfit/releases/download/v1.17.0/outfit_linux_arm64.tar.gz"
-      sha256 "5015028091361608a6265a0677a0ffb7cf8c9b518200a5ccb2873ae9b8ccde07"
+      url "https://github.com/lucinate-ai/outfit/releases/download/v1.18.0/outfit_linux_arm64.tar.gz"
+      sha256 "6f30259149daf20684febd85eee292f9209d25ee728b412242384f06d1f747fb"
       define_method(:install) do
         bin.install "outfit"
         generate_completions_from_executable(bin/"outfit", "completion", shells: [:bash, :zsh])
